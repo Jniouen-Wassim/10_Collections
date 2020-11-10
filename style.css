@@ -1,0 +1,26 @@
+body{
+
+    background: url(img/dessert.jpg) no-repeat fixed;
+    background: cover ;
+    background-color: black;
+   
+    
+}
+
+i{
+  color:red;
+}
+
+
+img{
+    width: 150px;  
+} 
+
+.card{
+background-color: rgb(193, 193, 196);
+}
+
+
+hr{
+  background-color: grey;
+}
