@@ -1,26 +1,108 @@
-body{
+body {
 
-    background: url(img/dessert.jpg) no-repeat fixed;
-    background: cover ;
-    background-color: black;
-   
-    
+  background: url(img/dessert.jpg) no-repeat fixed;
+  background: cover;
+  background-color: black;
+
 }
 
-i{
-  color:red;
+i {
+  color: red;
 }
 
 
-img{
-    width: 150px;  
+img {
+  width: 150px;
+
+}
+
+.card:hover {
+  margin-right: 10px;
+  margin-left: 10px;
+  animation: shake 0.9s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  border: 4px solid #F6EBE9;
+  border-radius: 6px;
+
+}
+
+@keyframes shake {
+  /* 10%, 90% {
+  transform: translate3d(-1px, 0, 0);
 } 
+20%, 80% {
+  transform: translate3d(2px, 0, 0);
+}
+30%, 50%, 70% {
+  transform: translate3d(-4px, 0, 0);
+}*/
 
-.card{
-background-color: rgb(193, 193, 196);
+  40%,
+  60% {
+    transform: translate3d(0, 5px, 0);
+  }
 }
 
 
-hr{
+.card {
+  background-color: #060000;
+  /* filter: brightness(80%); */
+  opacity: 0.9;
+  color: white;
+}
+
+hr {
   background-color: grey;
 }
+
+.bg-light {
+  background-color: #060000 !important;
+  opacity: 0.4;
+
+}
+
+
+/*
+
+.navbar {
+left: 100px !important ;
+right: 100px !important ;
+
+font-weight: bold; 
+position: fixed;
+z-index: 5 !important ; 
+top: 1.6%; 
+font-size: 20px;
+text-align: center;
+box-shadow: 0 1px 3px black;
+}
+
+.navbar-light .navbar-toggler-icon {
+background-color: #ffdead;
+background-image: url(img/);
+margin-right: -2px;
+padding: 15px;
+border: 2px solid #ffdead;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+.bg-light {
+background-color: white !important;
+border: 1px solid #ffdead;
+box-shadow: 5px 5px 10px #000000;
+
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-top-left-radius: 10px;
+}
+
+.navbar-brand img {
+
+max-height: 40px;
+}
+
+*/
