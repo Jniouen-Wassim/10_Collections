@@ -13,7 +13,7 @@ const collection = [{
         category: ["dessert"],
         img: "img/Cheese-cake-au-potimarron-et-speculoos.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Mon-super-banoffee-2258640",
-        description: "On succombe à cette pâtisserie anglaise à base de banane et de de caramel.",
+        description: "On succombe à cette pâtisserie anglaise à base de banane et de caramel.",
     },
 
     {
