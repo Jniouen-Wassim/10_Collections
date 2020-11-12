@@ -16,6 +16,36 @@ img {
 
 }
 
+.h1 {
+  background-color: rgb(6, 0, 0, 0.8); /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.card:hover {
+
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #F6EBE9;
+  box-shadow: 0 0 0 0 #FD535B;
+  animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01);
+  }
+}
+
+.card {
+  background-color:  rgb(6, 0, 0);
+  /* filter: brightness(80%); */
+  opacity: 0.9;
+  color: white;
+}
+
+/*
 .card:hover {
   margin-right: 10px;
   margin-left: 10px;
@@ -37,30 +67,25 @@ img {
 }
 30%, 50%, 70% {
   transform: translate3d(-4px, 0, 0);
-}*/
+}/*
 
   40%,
   60% {
     transform: translate3d(0, 5px, 0);
   }
 }
+*/
 
 
-.card {
-  background-color: #060000;
-  /* filter: brightness(80%); */
-  opacity: 0.9;
-  color: white;
-}
 
 hr {
   background-color: grey;
 }
 
 .bg-light {
-  background-color: #060000 !important;
-  opacity: 0.4;
-
+  background-color: rgb(6, 0, 0, 0.4) !important; /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
+  
+  
 }
 
 
