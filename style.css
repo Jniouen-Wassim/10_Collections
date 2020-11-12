@@ -4,6 +4,7 @@ body {
   background: cover;
   background-color: black;
 
+
 }
 
 i {
@@ -17,10 +18,13 @@ img {
 }
 
 .h1 {
-  background-color: rgb(6, 0, 0, 0.8); /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
+  background-color: rgb(6, 0, 0, 0.8);
+  /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
   margin-right: 10px;
   margin-left: 10px;
-
+  border-bottom-left-radius: 2em;
+  border-top-right-radius: 2em;
+  padding: 22px;
 }
 
 .card:hover {
@@ -39,7 +43,7 @@ img {
 }
 
 .card {
-  background-color:  rgb(6, 0, 0);
+  background-color: rgb(6, 0, 0);
   /* filter: brightness(80%); */
   opacity: 0.9;
   color: white;
@@ -83,9 +87,10 @@ hr {
 }
 
 .bg-light {
-  background-color: rgb(6, 0, 0, 0.4) !important; /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
-  
-  
+  background-color: rgb(6, 0, 0, 0.4) !important;
+  /*les 3 1er valeurs pour la couleur la dernier pour l'opacité */
+
+
 }
 
 
