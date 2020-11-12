@@ -80,8 +80,8 @@ h1:hover,
 
   margin-right: 10px;
   margin-left: 10px;
-  box-shadow: 0 0 0 0 #F2B28E;
-  animation: pulse 6s infinite;
+  box-shadow: 0 0 0 0 #FB7A8F;
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
