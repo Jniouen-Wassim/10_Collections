@@ -1,4 +1,5 @@
-const collection = [{
+const collection = [
+    {
         title: "Coulant au chocolat",
         author: "Edouard Sicot",
         category: ["dessert"],
@@ -8,7 +9,7 @@ const collection = [{
     },
 
     {
-        title: "Cheesecake ",
+        title: "Cheesecake",
         author: "Edouard Sicot",
         category: ["dessert"],
         img: "img/Cheese-cake-au-potimarron-et-speculoos.jpg",
@@ -90,11 +91,27 @@ const collection = [{
 ];
 
 
+//////////////////////////////// Filtrer les cartes ////////////////////////////////////////
 
-const mainContainer = document.querySelector(".supp");
-mainContainer.innerHTML = "";
+const dessertM = []
 
 for (let element of collection) {
+
+    if (element.title.match('M')) {
+
+        dessertM.push(element)
+    }
+
+}
+console.log(dessertM)
+
+/////////////////////////////// Fin pour filtrer les cartes //// ( ne pas oublier de changer la const après le 'of' dans la boucle 'for' ligne(114) pour ne pas afficher toute la collection ) /////
+
+/////////////////////////////   Card   ////////////////////////////////////////////////////
+const mainContainer = document.querySelector(".supp")
+mainContainer.innerHTML = ""
+
+ for (let element of collection ) { // dessertM
 
     const colonne = document.createElement('div');
     colonne.className = 'col-12 col-sm-6 col-md-4 col-xl-3 mb-4';
@@ -151,5 +168,6 @@ for (let element of collection) {
     icon_i.className = 'fab fa-youtube';
     lien_a.appendChild(icon_i);
 
-
 }
+
+/////////////////////////////   Fin Card   ////////////////////////////////////////////////////
