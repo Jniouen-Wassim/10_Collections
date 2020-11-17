@@ -1,5 +1,4 @@
-const collection = [
-    {
+const collection = [{
         title: "Coulant au chocolat",
         author: "Edouard Sicot",
         category: ["dessert"],
@@ -111,7 +110,7 @@ console.log(dessertM)
 const mainContainer = document.querySelector(".supp")
 mainContainer.innerHTML = ""
 
- for (let element of collection ) { // dessertM
+for (let element of collection) { // dessertM
 
     const colonne = document.createElement('div');
     colonne.className = 'col-12 col-sm-6 col-md-4 col-xl-3 mb-4';
@@ -147,8 +146,8 @@ mainContainer.innerHTML = ""
     card_body.appendChild(titre6);
 
     const overflow = document.createElement('div');
-    overflow.className = 'overflow-auto'; //changer 'mb-2' pour la taille
-    overflow.style = "height:6em";
+    overflow.className = 'overflow-auto';
+    overflow.style = "height:6em"; //changer 'mb-2' pour la taille
     card_body.appendChild(overflow);
 
     const phrase = document.createElement('p');

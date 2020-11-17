@@ -20,6 +20,10 @@ i {
   color: red;
 }
 
+.overflow-auto::-webkit-scrollbar {
+  /* pour ne pas afficher la scroll bar dans la card 'coulant au chocolat' par exemple */
+  display: none;
+}
 
 img {
   width: 150px;
@@ -56,7 +60,7 @@ h1:hover,
     transform: translate3d(2px, 0, 0);
   }
   */
-  
+
   30%,
   50%,
   70% {
@@ -91,8 +95,6 @@ h1:hover,
 }
 
 
-
-
 hr {
   background-color: grey;
 }
@@ -103,47 +105,3 @@ hr {
 
 
 }
-
-
-/*
-
-.navbar {
-left: 100px !important ;
-right: 100px !important ;
-
-font-weight: bold; 
-position: fixed;
-z-index: 5 !important ; 
-top: 1.6%; 
-font-size: 20px;
-text-align: center;
-box-shadow: 0 1px 3px black;
-}
-
-.navbar-light .navbar-toggler-icon {
-background-color: #ffdead;
-background-image: url(img/);
-margin-right: -2px;
-padding: 15px;
-border: 2px solid #ffdead;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-border-top-left-radius: 5px;
-}
-
-.bg-light {
-background-color: white !important;
-border: 1px solid #ffdead;
-box-shadow: 5px 5px 10px #000000;
-
-border-bottom-right-radius: 10px;
-border-bottom-left-radius: 10px;
-border-top-left-radius: 10px;
-}
-
-.navbar-brand img {
-
-max-height: 40px;
-}
-
-*/
