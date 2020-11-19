@@ -163,15 +163,15 @@ for (let element of collection) {
 
 //================================ RECHERCHE ==================================//
 
-function filterDessert(pattern){
+function filterDessert(information){
 	const results = []
   
   for(let dessert of collection){
-  	if(dessert.title.toLowerCase().match(pattern))
+  	if(dessert.title.toLowerCase().match(information))
     	results.push(dessert)
   }
   
-  const resultsDiv = document.querySelector('#collection_Filtrer')
+  const resultsDiv = document.querySelector('#collection_Filtrer') //pour envoyé la nouvel collection avec le filtre dans une nouvel 'div' ligne(351 HTML)
   resultsDiv.innerHTML = ''
   mainContainer.innerHTML = ''
 
