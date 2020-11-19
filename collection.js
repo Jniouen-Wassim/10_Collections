@@ -89,28 +89,11 @@ const collection = [{
     },
 ];
 
-
-//////////////////////////////// Filtrer les cartes ////////////////////////////////////////
-
-const dessertM = []
-
-for (let element of collection) {
-
-    if (element.title.match('M')) {
-
-        dessertM.push(element)
-    }
-
-}
-console.log(dessertM)
-
-/////////////////////////////// Fin pour filtrer les cartes //// ( ne pas oublier de changer la const après le 'of' dans la boucle 'for' ligne(113) pour ne pas afficher toute la collection ) /////
-
 /////////////////////////////   Card   ////////////////////////////////////////////////////
 const mainContainer = document.querySelector(".supp")
 mainContainer.innerHTML = ""
 
-for (let element of collection) { // dessertM
+for (let element of collection) {
 
     const colonne = document.createElement('div');
     colonne.className = 'col-12 col-sm-6 col-md-4 col-xl-3 mb-4';
@@ -130,12 +113,14 @@ for (let element of collection) { // dessertM
     const card_body = document.createElement('div');
     card_body.className = 'card-body';
     card.appendChild(card_body);
+
 //=============================== BADGES CATEGORY ================================//
+   
     const badge = document.createElement('span');
     badge.className = 'badge badge-success mb-3';
     badge.textContent = element.category;
-    card_body.appendChild(badge);
-
+    card_body.appendChild(badge); 
+   
 //==================================== TITRE =====================================//
     const titre4 = document.createElement('h4');
     titre4.className = 'h5 card-title';
@@ -160,7 +145,7 @@ for (let element of collection) { // dessertM
     phrase.textContent = element.description;
     overflow.appendChild(phrase);
 
-//================================LOGO YOUTUBE ==================================//
+//================================ LOGO YOUTUBE ==================================//
     const ligne = document.createElement('hr');
     card_body.appendChild(ligne);
 
@@ -175,3 +160,89 @@ for (let element of collection) { // dessertM
 }
 
 /////////////////////////////   Fin Card   ////////////////////////////////////////////////////
+
+//================================ RECHERCHE ==================================//
+
+function filterDessert(pattern){
+	const results = []
+  
+  for(let dessert of collection){
+  	if(dessert.title.toLowerCase().match(pattern))
+    	results.push(dessert)
+  }
+  
+  const resultsDiv = document.querySelector('#collection_Filtrer')
+  resultsDiv.innerHTML = ''
+  mainContainer.innerHTML = ''
+
+  for(let element of results) {
+    
+    const colonne = document.createElement('div');
+    colonne.className = 'col-12 col-sm-6 col-md-4 col-xl-3 mb-4 mx-auto';
+    resultsDiv.appendChild(colonne)
+    
+    const card = document.createElement('div');
+    card.className = 'card';
+    colonne.appendChild(card);
+
+//=================================== IMAGES =====================================//
+    const image = document.createElement('img');
+    image.className = 'card-img-top';
+    image.src = element.img; //pour selectionner 'img' de la premiere card ligne(3-10) vu que c'est une boucle elle va faire ça pour chacunea des cartes 
+    card.appendChild(image);
+
+//============================== CORPS DE CARTES =================================//
+    const card_body = document.createElement('div');
+    card_body.className = 'card-body';
+    card.appendChild(card_body);
+    
+//=============================== BADGES CATEGORY ================================//
+   
+    const badge = document.createElement('span');
+    badge.className = 'badge badge-success mb-3';
+    badge.textContent = element.category;
+    card_body.appendChild(badge); 
+   
+//==================================== TITRE =====================================//
+    const titre4 = document.createElement('h4');
+    titre4.className = 'h5 card-title';
+    titre4.textContent = element.title;
+    card_body.appendChild(titre4);
+
+//===================================== Sous-titre + Overflow =====================================//
+    const titre6 = document.createElement('h6');
+    titre6.className = 'h6 card-subtitle mb-4 text-muted';
+    titre6.style = "font-size: small";
+    titre6.textContent = element.author;
+    card_body.appendChild(titre6);
+
+    const overflow = document.createElement('div');
+    overflow.className = 'overflow-auto';
+    overflow.style = "height:6em"; //changer 'mb-2' pour la taille
+    card_body.appendChild(overflow);
+
+//================================== DESCRIPTION =================================//
+    const phrase = document.createElement('p');
+    phrase.className = 'card-text';
+    phrase.textContent = element.description;
+    overflow.appendChild(phrase);
+
+//================================ LOGO YOUTUBE ==================================//
+    const ligne = document.createElement('hr');
+    card_body.appendChild(ligne);
+
+    const lien_a = document.createElement('a');
+    lien_a.href = element.link;
+    card_body.appendChild(lien_a);
+
+    const icon_i = document.createElement('i');
+    icon_i.className = 'fab fa-youtube';
+    lien_a.appendChild(icon_i);
+    
+    }
+}
+
+document.querySelector('#recherche')
+.addEventListener('keyup', input => { /* sélection des valeurs(keyup) entrer dans la barre de recherche(input) */
+	filterDessert(input.target.value.toLowerCase())
+})
