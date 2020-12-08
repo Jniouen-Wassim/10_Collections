@@ -1,4 +1,4 @@
-const collection = [{
+const collection  = [{
         title: "Coulant au chocolat",
         author: "Edouard Sicot",
         category: ["dessert"],
