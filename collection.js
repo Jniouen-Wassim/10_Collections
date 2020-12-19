@@ -1,7 +1,7 @@
 const collection  = [{
         title: "Coulant au chocolat",
         author: "Edouard Sicot",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Le-vrai-coulant-au-chocolat.jpeg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Le-vrai-coulant-au-chocolat-2280940",
         description: "Une recette simple et efficace pour tous les fans de chocolat.",
@@ -10,7 +10,7 @@ const collection  = [{
     {
         title: "Cheesecake",
         author: "Edouard Sicot",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Cheese-cake-au-potimarron-et-speculoos.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Mon-super-banoffee-2258640",
         description: "On succombe à cette pâtisserie anglaise à base de banane et de caramel.",
@@ -19,7 +19,7 @@ const collection  = [{
     {
         title: "Sablés au parmesan",
         author: "Jean Claude Amiel",
-        category: ["biscuit"],
+        category: "biscuit",
         img: "img/Sables-au-parmesan.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Sables-au-parmesan-548053",
         description: "Une idée simple et facile pour un apéro fait-maison. ",
@@ -28,7 +28,7 @@ const collection  = [{
     {
         title: "Crème brûlée",
         author: "Jérôme Bilic",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Creme-brulee-facile.jpeg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Creme-brulee-facile-2894406",
         description: "Un délice que le monde entier nous envie !",
@@ -37,7 +37,7 @@ const collection  = [{
     {
         title: "Cookies banane, avoine et chocolat noir",
         author: "Jérôme Bilic",
-        category: ["biscuit"],
+        category: "biscuit",
         img: "img/Cookies-banane-flocons-d-avoine-et-chocolat-noir.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Cookies-banane-flocons-d-avoine-et-chocolat-noir-3407042",
         description: "On succombe tous à ce biscuit à la banane, flocons et chocolat noir",
@@ -46,7 +46,7 @@ const collection  = [{
     {
         title: "Gâteaux au chocolat",
         author: "Hanane",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Gateau-3-chocolats.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Gateau-3-chocolats-979655",
         description: "Gâteau au 3 chocolats",
@@ -55,7 +55,7 @@ const collection  = [{
     {
         title: "Cake au chocolat",
         author: "Getty",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Gateau-au-chocolat-facile.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Gateau-au-chocolat-facile-2080684",
         description: "Ultra-facile à cuisiner et à savourer, on fond pour cette recette de gâteau au chocolat, préparée avec 5 ingrédients à peine. Au menu, du chocolat noir (évidemment), du beurre, du sucre, des œufs et un soupçon de farine, suffisent pour préparer ce délice. Prête à fondre ?",
@@ -64,7 +64,7 @@ const collection  = [{
     {
         title: "Mon super banoffee",
         author: "Edouard Sicot",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Mon-super-banoffee.jpg",
         link: "https://www.elle.fr/Elle-a-Table/Recettes-de-cuisine/Mon-super-banoffee-2258640",
         description: "On succombe à cette pâtisserie anglaise à base de banane et de de caramel.",
@@ -73,7 +73,7 @@ const collection  = [{
     {
         title: "Salade d’orange",
         author: "Marjolaine Daguerre",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Salade-d-orange-a-l-eau-de-fleur-d-oranger.jpg",
         link: "https://youtu.be/IymYbQnN-wc",
         description: "Le secret de cette recette ultra-rapide tient dans la découpe des oranges et dans le dosage subtil de l’eau de fleur d’oranger.",
@@ -82,7 +82,7 @@ const collection  = [{
     {
         title: "Pâte à choux Thermomix",
         author: "Getty",
-        category: ["dessert"],
+        category: "dessert",
         img: "img/Pate-a-choux-Thermomix.jpg",
         link: "https://youtu.be/fTU168ttp_g",
         description: "Les secrets pour faire une pâte à choux parfaite avec son Thermomix.",
@@ -167,7 +167,7 @@ function filterDessert(information){
 	const results = []
   
   for(let dessert of collection){
-  	if(dessert.title.toLowerCase().match(information))
+  	if(dessert.title.toLowerCase().match(information) || dessert.author.toLowerCase().match(information) || dessert.category.toLowerCase().match(information) )
     	results.push(dessert)
   }
   
